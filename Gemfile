@@ -90,3 +90,5 @@ gem "cssbundling-rails", "~> 1.1"
 gem "font_awesome5_rails", "~> 1.5"
 
 gem "kaminari", "~> 1.2"
+
+gem "hot-glue", "~> 0.5.8"
