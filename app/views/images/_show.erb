@@ -1,0 +1,21 @@
+<div class='col-sm-5 image--name'> <%= image.name %></div>
+<div class='col-sm-5 image--avatar'> <%= image.avatar.attached? && image.avatar.variable? ? image_tag(image.avatar.variant(:thumb)) : '' %></div>
+
+
+
+
+
+
+<div class=" scaffold-line-buttons col-md-2" >
+  
+
+  
+    <%= form_with url: image_path(image), html: {data: {'turbo-confirm': "Are you sure you want to delete #{ image.name }?"}, style: "display: inline-block;"}, method: :delete do |f| %>
+      <%= f.submit "Delete".html_safe,  class: "delete-image-button btn btn-primary btn-sm" %>
+    <% end %>
+  
+
+  
+  <%= link_to "Edit <i class='fa fa-1x fa-list-alt'></i>".html_safe, edit_image_path(image), disable_with: "Loading...", class: "edit-image-button btn btn-primary btn-sm" %>
+  
+</div>

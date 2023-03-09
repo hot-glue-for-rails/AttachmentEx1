@@ -1,0 +1,38 @@
+<%= turbo_frame_tag "__images-list"   do %>
+  <div class="container ">
+    
+      <h4>
+        IMAGES
+      </h4>
+    
+
+    <%= render partial: "images/new_button", locals: {} %><br />
+
+    
+      
+        <div class="row ">
+          <div class='col-sm-5' heading--image--name >Name</div>
+<div class='col-sm-5' heading--image--avatar >Avatar</div>
+
+          
+
+          <div class=' scaffold-col-heading scaffold-col-heading-buttons col-sm-5' >
+          </div>
+        </div>
+      
+
+      <% if images.empty? %>
+    <div>
+        None
+    </div>
+      <% end %>
+      <% images.each do |image| %>
+        <%= render partial: 'images/line', locals: {image: image}
+            .merge(defined?(nested_for) ? {nested_for: nested_for} : {})
+      
+        %>
+      <% end %>
+    <% if images.respond_to?(:total_pages) %><%= paginate(images) %> <% end %>
+  
+  </div>
+<% end %>

@@ -1,0 +1,9 @@
+<%= turbo_frame_tag "__image-new" do %>
+  <h3>
+    New Image
+  </h3>
+  <%= form_with model:  image, url: images_path, method: :post do  |f| %>
+    <%=  render partial: "images/form",
+locals: { image: image, f: f} %>
+ <% end %>
+<% end %>

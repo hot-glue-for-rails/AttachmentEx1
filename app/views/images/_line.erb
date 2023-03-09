@@ -1,0 +1,10 @@
+<%= turbo_frame_tag "__#{ dom_id(image) }" do  %>
+  <div class='row' data-id='<%= image.id %>' data-edit='false'>
+    <%= render partial: 'images/show', locals: { image: image } %>
+
+  </div>
+<% end %>
+
+
+
+

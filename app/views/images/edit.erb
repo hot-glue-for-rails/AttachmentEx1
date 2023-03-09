@@ -1,0 +1,20 @@
+<%= link_to "<i class='fa fa-arrow-circle-left  2x'></i> Back to list".html_safe, images_path %>
+
+<%= turbo_frame_tag "__#{dom_id(@image)}" do  %>
+
+  <div class="cell editable" style="position: relative;">
+
+    <% if @image.errors.any? %>
+      <%= render(partial: "errors", locals: {resource: @image }) %>
+    <% end %>
+
+    <h2>Editing <%= @image.name %></h2>
+    <%= form_with model: @image, url: image_path(@image) do |f| %>
+    <%=  render partial: "form",  locals: {:image => @image, f: f} %>
+    <% end %>
+
+  </div>
+
+<% end %>
+
+

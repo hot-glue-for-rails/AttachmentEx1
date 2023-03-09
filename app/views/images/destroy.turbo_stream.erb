@@ -1,0 +1,3 @@
+<%= turbo_stream.replace "__images-list" + "" do %>
+  <%= render partial: "list", locals: {images: @images } %>
+<% end %>

@@ -91,6 +91,10 @@ gem "font_awesome5_rails", "~> 1.5"
 
 gem "kaminari", "~> 1.2"
 
-gem "hot-glue", "~> 0.5.8"
+# gem "hot-glue", "~> 0.5.8"
+
+gem "hot-glue", path: "/Users/jason/Work/Hot_Glue/hot-glue-private"
 
 gem "image_processing", "~> 1.12"
+
+gem "aws-sdk-s3", "~> 1.119"
