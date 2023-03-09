@@ -92,3 +92,5 @@ gem "font_awesome5_rails", "~> 1.5"
 gem "kaminari", "~> 1.2"
 
 gem "hot-glue", "~> 0.5.8"
+
+gem "image_processing", "~> 1.12"
