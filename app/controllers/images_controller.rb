@@ -31,7 +31,7 @@ class ImagesController < ApplicationController
   def create
  
     modified_params = modify_date_inputs_on_params(image_params.dup)
-    modified_params[:name] = image_params['avatar'].original_filename
+    # modified_params[:name] = image_params['avatar'].original_filename
     @image = Image.create(modified_params)
 
     if @image.save

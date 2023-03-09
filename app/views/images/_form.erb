@@ -8,12 +8,22 @@
     </span>
     <br />
   </div>
-  <div class='col-md-5 cell--image--avatar' >  
-    <span class='<%= "alert-danger" if image.errors.details.keys.include?(:avatar) %>'  style="display: inherit;"  >
-      <%= image.avatar.attached? && image.avatar.variable? ? image_tag(image.avatar.variant(:thumb)) : '' %><br />
-      <%= f.file_field :avatar %>
-      <label class='small form-text text-muted'>Avatar</label>
-    </span>
+  <div class='col-md-5 cell--image--avatar' >
+    <div class="dropzone dropzone-default dz-clickable" data-controller="dropzone" data-dropzone-max-file-size="2" data-dropzone-max-files="1">
+
+      <span class='<%= "alert-danger" if image.errors.details.keys.include?(:avatar) %>'  style="display: inherit;"  >
+        <%= image.avatar.attached? && image.avatar.variable? ? image_tag(image.avatar.variant(:thumb)) : '' %><br />
+        <%= f.file_field :avatar, 'data-dropzone-target': "input", direct_upload: true %>
+        <label class='small form-text text-muted'>Avatar</label>
+      </span>
+      <div class="dropzone-msg dz-message">
+        <h3 class="dropzone-msg-title">Drag here to upload or click here to browse</h3>
+        <span class="dropzone-msg-desc">2 MB file size maximum. Allowed file types png, jpg.</span>
+      </div>
+    </div>
+
+
+    </div>
     <br />
   </div>
 
