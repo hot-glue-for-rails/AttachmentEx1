@@ -70,3 +70,14 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "rspec-rails", "~> 6.0", :groups => [:development, :test]
+gem "rspec-wait", "~> 0.0.9", :groups => [:development, :test]
+gem "factory_bot_rails", "~> 6.2", :groups => [:development, :test]
+gem "ffaker", "~> 2.21", :groups => [:development, :test]
+gem "vcr", "~> 6.1", :groups => [:development, :test]
+gem "simplecov", "~> 0.22.0", :groups => [:development, :test]
+gem "dotenv-rails", "~> 2.8", :groups => [:development, :test]
+
+gem "simplecov-rcov", "~> 0.3.1", :group => :test
+gem "launchy", "~> 2.5", :group => :test
