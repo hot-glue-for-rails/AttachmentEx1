@@ -104,6 +104,9 @@ GEM
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
     ffaker (2.21.0)
+    font_awesome5_rails (1.5.0)
+      nokogiri (>= 1.11.3)
+      railties (>= 4.2)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -264,6 +267,7 @@ DEPENDENCIES
   dotenv-rails (~> 2.8)
   factory_bot_rails (~> 6.2)
   ffaker (~> 2.21)
+  font_awesome5_rails (~> 1.5)
   jbuilder
   jsbundling-rails
   launchy (~> 2.5)
